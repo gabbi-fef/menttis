@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #faf4e8;
+}
+
+/* ----- NAVBAR ----- */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 25px;
+    color: #2b4d9c;
+}
+
+.logo {
+    font-weight: bold;
+    color: #2b4d9c;
+}
+
+.caixa-pesquisa {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: 700px; 
+  margin-left: 100px;
+}
+
+.caixa-pesquisa img.icone-lupa {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.caixa-pesquisa input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.noti {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 2px;
+    color: #2b4d9c;
+}
+
+.imglogo {
+    width: 50px;
+    height: 50px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* ----- CONTEÚDO PRINCIPAL ----- */
+.container {
+    padding: 40px 60px;
+}
+
+.container h1 {
+    font-size: 28px;
+    color: #2b4d9c;
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 16px;
+    color: #555;
+}
+
+.botao {
+    width: 300px;
+    padding: 12px;
+    background-color: #2f52a2;
+    color: #F5C22C;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 18px 0 0 0;
+    display: block;          
+    text-align: center;
+    text-decoration: none;
+}
+
+/* ----- MENU LATERAL ----- */
+#menulat {
+  display: none;
+}
+
+.menulateral {
+  position: fixed;
+  left: -360px; /* Corrigido para o mesmo valor do width */
+  top: 0;
+  width: 360px;
+  height: 100%;
+  background-color: #2b4d9c;
+  color: white;
+  padding: 25px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Quando o checkbox for marcado, o menu aparece */
+#menulat:checked ~ .menulateral {
+  left: 0;
+}
+
+/* ----- CONTEÚDO DO MENU ----- */
+.menulateral .logomen {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.menulateral h2 {
+  color: #F5C22C;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.menulateral ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* distância entre os itens */
+}
+
+.menulateral li {
+  margin: 18px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menulateral li:hover {
+  color: #F5C22C;
+  transition: 0.2s;
+}
+
+/* Botão sair */
+.logout {
+  margin-top: 50px;
+  background: none;
+  border: 1px solid #F5C22C;
+  color: #F5C22C;
+  padding: 10px;
+  width: 80%;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.logout:hover {
+  background-color: #F5C22C;
+  color: #2b4d9c;
+  transition: 0.3s;
+}
+
+/* Ícone ☰ */
+.menulat {
+  font-size: 26px;
+  cursor: pointer;
+  color: #2b4d9c;
+}
+
+.menulateral ul li a {
+  text-decoration: none; /* tira o sublinhado */
+  color: white;           /* mantém o texto branco */
+  display: block;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.menulateral ul li a:hover {
+  color: #F5C22C;         /* muda pra amarelo quando passa o mouse */
+}
+
+.topo-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* linha branca transparente */
+}
+
+
+/* Ajusta a logo do menu */
+.menulateral .logomen {
+  width: 55px;
+  height: 55px;
+  object-fit: contain; /* garante que a logo não deforme */
+}
+
+/* Deixa o texto “Menttis” branco e sem margem extra */
+.menulateral h2 {
+  color: white;
+  font-size: 22px;
+  margin: 0;
+}
+
+.icones {
+  width: 30px;
+  height: 30px;
+}
